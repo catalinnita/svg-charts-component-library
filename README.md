@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# SvgChartsComponentLibrary
-Charts have to be beautiful, I mean really beautiful 
-=======
 # Turborepo Design System starter
 
 This is an official React design system starter powered by Turborepo.
@@ -64,4 +60,3 @@ To publish packages to a private NPM organization scope, **remove** the followin
 #### GitHub Package Registry
 
 See [Working with the npm registry](https://docs.github.com/en/packages/working-with-a-github-packages-registry/working-with-the-npm-registry#publishing-a-package-using-publishconfig-in-the-packagejson-file)
->>>>>>> f06ebd9 (initial commit)
