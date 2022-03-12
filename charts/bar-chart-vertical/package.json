@@ -1,7 +1,7 @@
 {
-    "name": "@sd-charts/bar-chart",
-    "displayName": "BarChart",
-    "description": "The *BarChartHorizontal* is used for simple data series",
+    "name": "@sd-charts/bar-chart-vertical",
+    "displayName": "BarChartVertical",
+    "description": "The *BarChartVertical* is used for simple data series",
     "version": "0.0.1",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

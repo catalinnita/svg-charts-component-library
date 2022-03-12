@@ -1,8 +1,8 @@
 
 import { render } from "@testing-library/react"
-import { BarChart } from "./barChart"
+import { BarChartVertical } from "./barChartVertical"
 
 it("renders the example component", () => {
-    const { queryAllByText } = render(<BarChart />)
+    const { queryAllByText } = render(<BarChartVertical />)
     expect(queryAllByText('Example').length).toBe(1)
 })
