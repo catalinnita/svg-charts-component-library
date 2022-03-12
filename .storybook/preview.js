@@ -1,9 +1,12 @@
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
+
+import React from 'react'
+
+const withWrapper = (Story, context) => {
+  return (
+      <>
+          <Story {...context} />
+      </>
+  )
 }
+
+export const decorators = [withWrapper];

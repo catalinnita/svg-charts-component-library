@@ -1,0 +1,16 @@
+{
+    "name": "sd-charts",
+    "description": "The main package for sd-charts components",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "utl": "https://github.com/catalinnita/svg-charts-component-library"
+    },
+    "scripts": {
+        "test": "jest --coverage"
+    }
+}

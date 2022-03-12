@@ -1,0 +1,62 @@
+[
+    {
+      "label": "China",
+      "value": 765,
+      "displayValue": "765M",
+      "color": "#f28c8e"
+    },
+    {
+      "label": "India",
+      "value": 391,
+      "displayValue": "391M",
+      "color": "#f2b7a4"
+    },
+    {
+      "label": "United States",
+      "value": 245,
+      "displayValue": "245M",
+      "color": "#f3d2b5"
+    },
+    {
+      "label": "Japan",
+      "value": 116,
+      "displayValue": "116M",
+      "color": "#558fa6"
+    },  
+    {
+      "label": "Brazil",
+      "value": 146,
+      "displayValue": "126M",
+      "color": "#2d6072"
+    },  
+    {
+      "label": "Russia",
+      "value": 109,
+      "displayValue": "109M",
+      "color": "#582841"
+    },
+    {
+      "label": "Some Country",
+      "value": 5,
+      "displayValue": "5M",
+      "color": "#000000"
+    },
+    {
+      "label": "Some Other Country",
+      "value": -30,
+      "displayValue": "-30M",
+      "color": "#2d3436"
+    },
+    {
+      "label": "Another Country",
+      "value": -60,
+      "displayValue": "-60M",
+      "color": "#a29bfe"
+    },
+    {
+      "label": "Very Low Country",
+      "value": -450,
+      "displayValue": "-450M",
+      "color": "#fab1a0"
+    }
+]

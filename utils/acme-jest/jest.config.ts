@@ -9,6 +9,7 @@ const config: Config.InitialOptions = {
   transform: {
     "^.+\\.tsx?$": "ts-jest"
   },
+  coverageDirectory: '.coverage',
   coverageThreshold: {
     "global": {
       "branches": 100,

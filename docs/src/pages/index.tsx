@@ -7,8 +7,8 @@ export default function Docs() {
   }, []);
   return (
     <div>
-      <h1>Acme Documentation</h1>
-      <Button>Click me</Button>
+      <h1 key="">Acme Documentation</h1>
+      <Button key="">Click me</Button>
     </div>
   );
 }
