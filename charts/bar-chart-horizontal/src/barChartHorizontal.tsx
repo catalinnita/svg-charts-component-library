@@ -1,5 +1,5 @@
 import BarHorizontal from '@sd-svg/bar-horizontal'
-import GradientVertical from '@sd-svg/gradient-vertical'
+import GradientHorizontal from '@sd-svg/gradient-horizontal'
 import { getMin, getMax } from '@sd/data'
 import { hexToRgb } from '@sd/colors'
 import { BarChartDataI, ColorTypeT } from './types'
@@ -61,9 +61,9 @@ export function BarChartHorizontal({
     return (
         <svg height={svgHeight} width={width}>
             {colorType === 'heat-gradient' && <defs>
-                <GradientVertical
+                <GradientHorizontal
                     id="gradient"
-                    size={height}
+                    size={width}
                     startColor={`rgb(${Object.values(hexToRgb(endColor || '#000000')).join(',')})`}
                     endColor={`rgb(${Object.values(hexToRgb(startColor || '#000000')).join(',')})`}
                 />
