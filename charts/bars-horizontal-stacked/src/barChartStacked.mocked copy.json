@@ -1,0 +1,94 @@
+[
+    {
+      "label": "2020-Q1",
+      "values": [
+        {
+          "label": "Kent",
+          "value": 44700,
+          "displayValue": "44700"
+        }, {
+          "label": "Lincoln",
+          "value": 52800,
+          "displayValue": "52800"
+        }, {
+          "label": "MERSEY",
+          "value": 43500,
+          "displayValue": "43500"
+        }, {
+          "label": "YORK",
+          "value": 38800,
+          "displayValue": "38800"
+        }
+      ],
+      "color": "#f28c8e"
+    },
+    {
+      "label": "2020-Q2",
+      "values": [
+        {
+          "label": "Kent",
+          "value": 45000,
+          "displayValue": "45000"
+        }, {
+          "label": "Lincoln",
+          "value": 36500,
+          "displayValue": "36500"
+        }, {
+          "label": "MERSEY",
+          "value": 41000,
+          "displayValue": "41000"
+        }, {
+          "label": "YORK",
+          "value": 34100,
+          "displayValue": "34100"
+        }
+      ],
+      "color": "#f2b7a4"
+    },
+    {
+      "label": "2020-Q3",
+      "values": [
+        {
+          "label": "Kent",
+          "value": 51200,
+          "displayValue": "51200"
+        }, {
+          "label": "Lincoln",
+          "value": 44200,
+          "displayValue": "44200"
+        }, {
+          "label": "MERSEY",
+          "value": 39700,
+          "displayValue": "39700"
+        }, {
+          "label": "YORK",
+          "value": 27000,
+          "displayValue": "27000"
+        }
+      ],
+      "color": "#f3d2b5"
+    },
+    {
+      "label": "2020-Q4",
+      "values": [
+        {
+          "label": "Kent",
+          "value": 56500,
+          "displayValue": "56500"
+        }, {
+          "label": "Lincoln",
+          "value": 45300,
+          "displayValue": "45300"
+        }, {
+          "label": "MERSEY",
+          "value": 41200,
+          "displayValue": "41200"
+        }, {
+          "label": "YORK",
+          "value": 48900,
+          "displayValue": "48900"
+        }
+      ],
+      "color": "#558fa6"
+    }
+]

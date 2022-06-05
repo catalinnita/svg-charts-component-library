@@ -7,7 +7,9 @@
     "svg/*",
     "utils/*",
     "docs/",
-    "api/"
+    "api/",
+    "showcase",
+    "showcase/*"
   ],
   "scripts": {
     "build": "turbo run build",
@@ -39,6 +41,8 @@
     "turbo": "latest"
   },
   "dependencies": {
+    "fs-extra": "^10.1.0",
+    "prompt": "^1.3.0",
     "react": "^17.0.2"
   }
 }

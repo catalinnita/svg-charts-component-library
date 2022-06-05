@@ -4,7 +4,7 @@ import { GradientHorizontal } from './gradientHorizontal'
 import * as packageJson from '../package.json'
 
 export default {
-  title: packageJson.displayName,
+  title: `atoms/${packageJson.displayName}`,
   component: GradientHorizontal,
 } as ComponentMeta<typeof GradientHorizontal>;
 

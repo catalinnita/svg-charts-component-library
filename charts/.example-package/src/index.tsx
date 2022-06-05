@@ -1,3 +1,3 @@
-import { Example } from './example'
+import { ComponentName } from './componentName'
 
-export default Example
+export default ComponentName

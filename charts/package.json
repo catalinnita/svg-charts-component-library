@@ -11,6 +11,10 @@
         "utl": "https://github.com/catalinnita/svg-charts-component-library"
     },
     "scripts": {
+        "create-component": "node ./.scripts/createComponent.js",
         "test": "jest --coverage"
+    },
+    "dependencies": {
+        "replace-in-file": "^6.3.2"
     }
 }

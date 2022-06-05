@@ -4,7 +4,7 @@ import { BarHorizontal } from './barHorizontal'
 import * as packageJson from '../package.json'
 
 export default {
-  title: packageJson.displayName,
+  title: `atoms/${packageJson.displayName}`,
   component: BarHorizontal,
 } as ComponentMeta<typeof BarHorizontal>;
 

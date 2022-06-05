@@ -4,7 +4,7 @@ import { Example } from './example'
 import * as packageJson from '../package.json'
 
 export default {
-  title: packageJson.displayName,
+  title: `atoms/${packageJson.displayName}`,
   component: Example,
 } as ComponentMeta<typeof Example>;
 

@@ -1,0 +1,132 @@
+[
+    {
+      "label": "2020-Q1",
+      "values": [
+        {
+          "label": "Kent",
+          "value": 50,
+          "displayValue": "44700",
+          "color": "#f28c8e"
+        }, {
+          "label": "Lincoln",
+          "value": 40,
+          "displayValue": "52800",
+          "color": "#f3d2b5"
+        }, {
+          "label": "MERSEY",
+          "value": 110,
+          "displayValue": "43500",
+          "color": "#558fa6"
+        }, {
+          "label": "YORK",
+          "value": 100,
+          "displayValue": "38800",
+          "color": "#500fa6"
+        }
+      ]
+    },
+    {
+      "label": "2020-Q2",
+      "values": [
+        {
+          "label": "Kent",
+          "value": 30,
+          "displayValue": "45000",
+          "color": "#f28c8e"
+        }, {
+          "label": "Lincoln",
+          "value": 40,
+          "displayValue": "36500",
+          "color": "#f3d2b5"
+        }, {
+          "label": "MERSEY",
+          "value": 100,
+          "displayValue": "41000",
+          "color": "#558fa6"
+        }, {
+          "label": "YORK",
+          "value": 90,
+          "displayValue": "34100",
+          "color": "#500fa6"
+        }
+      ]
+    },
+    {
+      "label": "2020-Q3",
+      "values": [
+        {
+          "label": "Kent",
+          "value": 20,
+          "displayValue": "51200",
+          "color": "#f28c8e"
+        }, {
+          "label": "Lincoln",
+          "value": 30,
+          "displayValue": "44200",
+          "color": "#f3d2b5"
+        }, {
+          "label": "MERSEY",
+          "value": 40,
+          "displayValue": "39700",
+          "color": "#558fa6"
+        }, {
+          "label": "YORK",
+          "value": 80,
+          "displayValue": "27000",
+          "color": "#500fa6"
+        }
+      ]
+    },
+    {
+      "label": "2020-Q4",
+      "values": [
+        {
+          "label": "Kent",
+          "value": 90,
+          "displayValue": "56500",
+          "color": "#f28c8e"
+        }, {
+          "label": "Lincoln",
+          "value": 70,
+          "displayValue": "45300",
+          "color": "#f3d2b5"
+        }, {
+          "label": "MERSEY",
+          "value": 20,
+          "displayValue": "41200",
+          "color": "#558fa6"
+        }, {
+          "label": "YORK",
+          "value": 10,
+          "displayValue": "48900",
+          "color": "#500fa6"
+        }
+      ]
+    },
+    {
+      "label": "2020-Q5",
+      "values": [
+        {
+          "label": "Kent",
+          "value": 80,
+          "displayValue": "56500",
+          "color": "#f28c8e"
+        }, {
+          "label": "Lincoln",
+          "value": -40,
+          "displayValue": "45300",
+          "color": "#f3d2b5"
+        }, {
+          "label": "MERSEY",
+          "value": -20,
+          "displayValue": "41200",
+          "color": "#558fa6"
+        }, {
+          "label": "YORK",
+          "value": -10,
+          "displayValue": "48900",
+          "color": "#500fa6"
+        }
+      ]
+    }
+]

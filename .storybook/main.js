@@ -1,5 +1,6 @@
 module.exports = {
   "stories": [
+    "../showcase/**/*.stories.tsx",
     "../charts/**/*.stories.tsx",
     "../svg/**/*.stories.tsx"
   ],

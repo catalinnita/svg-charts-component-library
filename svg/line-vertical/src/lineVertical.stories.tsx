@@ -4,7 +4,7 @@ import { LineVertical } from './lineVertical'
 import * as packageJson from '../package.json'
 
 export default {
-  title: packageJson.displayName,
+  title: `atoms/${packageJson.displayName}`,
   component: LineVertical,
 } as ComponentMeta<typeof LineVertical>;
 

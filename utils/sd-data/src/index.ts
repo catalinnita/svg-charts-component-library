@@ -13,3 +13,9 @@ export function getMin<T extends BasicDataI>(data: T[]) {
         acc = acc > curr.value ? curr.value : acc
     , 0)
 }
+
+export function getSum<T extends BasicDataI>(data: T[]) { 
+    return data.reduce((acc, curr) => 
+        acc += curr.value
+    , 0)
+}
