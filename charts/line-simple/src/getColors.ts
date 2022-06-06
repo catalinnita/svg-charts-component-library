@@ -1,4 +1,4 @@
-import { hexToRgb, interpolateColor } from "@sd/colors"
+import { hexToRgb, interpolateColor } from "@scrambled-data/colors"
 import { ColorTypeT } from "./types"
 
 export interface GetColorsI<P> {
@@ -43,8 +43,8 @@ export const getColors: GetColorsI<ColorTypeT> = (
     }
 
     if (colorType === 'gradient' && startColor && endColor) {
-        const color1rgb = Object.values(hexToRgb(startColor))
-        const color2rgb = Object.values(hexToRgb(endColor))
+        const color1rgb = Object.keys(hexToRgb(startColor)).map(key => hexToRgb(startColor)[key])
+        const color2rgb = Object.keys(hexToRgb(endColor)).map(key => hexToRgb(endColor)[key])
 
         return `rgb(${interpolateColor(color1rgb, color2rgb, (value - hMin)/(hMax-hMin)).join(',')})`
     }

@@ -1,5 +1,5 @@
 import nextJest from 'next/jest'
-import config from '@acme/jest/jest.config'
+import config from '@scrambled-data/jest/jest.config'
 
 const createJestConfig = nextJest({
   dir: './src',

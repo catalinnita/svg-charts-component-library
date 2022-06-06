@@ -23,7 +23,9 @@ export function interpolateColor(color1: number[], color2: number[], factor: num
 }
 
 export function getColorsInBetween(color1: string, color2: string, size: number) { 
+    // @ts-ignore
     const color1rgb = Object.values(hexToRgb(color1))
+    // @ts-ignore
     const color2rgb = Object.values(hexToRgb(color2))
     const colors = [];
     const step = 1 / (size - 1)

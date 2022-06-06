@@ -9,9 +9,9 @@ This Turborepo includes the following packages and apps:
 ### Apps and Packages
 
 - `docs`: A placeholder documentation site powered by [Next.js](https://nextjs.org)
-- `@acme/core`: core React components
-- `@acme/utils`: shared React utilities
-- `@acme/tsconfig`: shared `tsconfig.json`s used throughout the monorepo
+- `@scrambled-data/core`: core React components
+- `@scrambled-data/utils`: shared React utilities
+- `@scrambled-data/tsconfig`: shared `tsconfig.json`s used throughout the monorepo
 - `eslint-preset-acme`: ESLint preset
 
 Each package and app is 100% [Typescript](https://www.typescriptlang.org/).

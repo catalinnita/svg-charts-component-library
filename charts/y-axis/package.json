@@ -1,8 +1,8 @@
 {
-    "name": "@sd-charts/y-axis",
+    "name": "@scrambled-data/y-axis",
     "displayName": "yAxis",
     "description": "The *yAxis* is used to show the important points on vertical axis.",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -12,13 +12,18 @@
         "utl": "https://github.com/catalinnita/svg-charts-component-library"
     },
     "scripts": {
-        "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+        "build": "tsc src/index.tsx --declaration --jsx react-jsx --outDir ./dist",
         "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
         "lint": "TIMING=1 eslint src --fix",
         "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
     },
-    "dependencies": {
-    },
     "devDependencies": {
+        "@scrambled-data/tsconfig": "^1.0.0",
+        "@types/react": "^18.0.12",
+        "@types/react-dom": "^18.0.5"
+    },
+    "dependencies": {
+        "@scrambled-data/line-horizontal": "*",
+        "@scrambled-data/line-vertical": "*"
     }
 }

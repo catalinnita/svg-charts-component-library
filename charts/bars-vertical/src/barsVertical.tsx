@@ -1,7 +1,7 @@
-import BarVertical from '@sd-svg/bar-vertical'
-import GradientVertical from '@sd-svg/gradient-vertical'
-import { getMin, getMax } from '@sd/data'
-import { hexToRgb } from '@sd/colors'
+import BarVertical from '@scrambled-data/bar-vertical'
+import GradientVertical from '@scrambled-data/gradient-vertical'
+import { getMin, getMax } from '@scrambled-data/data'
+import { hexToRgb } from '@scrambled-data/colors'
 import { BarChartDataI, ColorTypeT } from './types'
 import { getColors } from './getColors'
 

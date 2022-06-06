@@ -1,8 +1,8 @@
 {
-    "name": "@sd-charts/component-folder",
+    "name": "@scrambled-data/component-folder",
     "displayName": "ComponentName",
     "description": "ComponentDescription",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",
@@ -12,14 +12,12 @@
         "utl": "https://github.com/catalinnita/svg-charts-component-library"
     },
     "scripts": {
-        "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
+        "build": "tsc src/index.tsx --declaration --jsx react-jsx --outDir ./dist",
         "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
         "lint": "TIMING=1 eslint src --fix",
         "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
     },
     "dependencies": {
-        "react": "^17.0.2"
-    },
-    "devDependencies": {
+        "react": "^18.1.0"
     }
 }

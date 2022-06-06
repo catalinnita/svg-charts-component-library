@@ -1,0 +1,16 @@
+{
+    "name": "@scrambled-data/svg",
+    "description": "The main package for sd-svg components",
+    "version": "1.0.0",
+    "main": "dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "utl": "https://github.com/catalinnita/svg-charts-component-library"
+    },
+    "scripts": {
+        "test": "jest --coverage"
+    }
+}

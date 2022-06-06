@@ -1,5 +1,5 @@
-import Circle from '@sd-svg/circle'
-import { getMin, getMax } from '@sd/data'
+import Circle from '@scrambled-data/circle'
+import { getMin, getMax } from '@scrambled-data/data'
 import { ColorTypeT } from './types'
 
 export type Props = {

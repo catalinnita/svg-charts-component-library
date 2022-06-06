@@ -1,5 +1,5 @@
-import { Button } from "@acme/core";
-import { useIsomorphicLayoutEffect } from "@acme/utils";
+import { Button } from "@scrambled-data/core";
+import { useIsomorphicLayoutEffect } from "@scrambled-data/utils";
 
 export default function Docs() {
   useIsomorphicLayoutEffect(() => {

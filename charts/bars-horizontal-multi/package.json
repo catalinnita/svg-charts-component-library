@@ -1,8 +1,8 @@
 {
-    "name": "@sd-charts/bars-horizontal-multi",
+    "name": "@scrambled-data/bars-horizontal-multi",
     "displayName": "BarsHorizontalMulti",
     "description": "The *BarsHorizontalMulti* is used for simple data series",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
@@ -16,11 +16,14 @@
         "lint": "TIMING=1 eslint src --fix",
         "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
     },
-    "dependencies": {
-        "react": "^17.0.2",
-        "@sd/data": "^0.0.1",
-        "@sd/colors": "^0.0.1"
-    },
     "devDependencies": {
+        "@scrambled-data/tsconfig": "^1.0.0",
+        "@types/react": "^18.0.12",
+        "@types/react-dom": "^18.0.5"
+    },
+    "dependencies": {
+        "@scrambled-data/colors": "^1.0.0",
+        "@scrambled-data/data": "^1.0.0",
+        "react": "^18.1.0"
     }
 }

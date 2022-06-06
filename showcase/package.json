@@ -1,7 +1,7 @@
 {
-    "name": "sd-showcase",
+    "name": "@scrambled-data/showcase",
     "description": "Example charts",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",

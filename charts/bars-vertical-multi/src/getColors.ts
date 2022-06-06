@@ -1,4 +1,4 @@
-import { hexToRgb, interpolateColor } from "@sd/colors"
+import { hexToRgb, interpolateColor } from "@scrambled-data/colors"
 import { ColorTypeT } from "./types"
 
 export interface GetColorsI<P> {

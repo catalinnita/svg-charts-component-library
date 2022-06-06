@@ -1,5 +1,5 @@
-import LineHorizontal from '@sd-svg/line-horizontal'
-import LineVertical from '@sd-svg/line-vertical'
+import LineHorizontal from '@scrambled-data/line-horizontal'
+import LineVertical from '@scrambled-data/line-vertical'
 
 export function YAxis({
     x = 40,
