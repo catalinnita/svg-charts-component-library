@@ -2,7 +2,7 @@
     "name": "@scrambled-data/bars-horizontal-stacked",
     "displayName": "BarsHorizontalStacked",
     "description": "The *BarsHorizontalStacked* is used for simple data series",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "license": "MIT",
@@ -17,13 +17,13 @@
         "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
     },
     "devDependencies": {
-        "@scrambled-data/tsconfig": "^1.0.0",
+        "@scrambled-data/tsconfig": "^1.0.1",
         "@types/react": "^18.0.12",
         "@types/react-dom": "^18.0.5"
     },
     "dependencies": {
-        "@scrambled-data/colors": "^1.0.0",
-        "@scrambled-data/data": "^1.0.0",
+        "@scrambled-data/colors": "^1.0.1",
+        "@scrambled-data/data": "^1.0.1",
         "react": "^18.1.0"
     }
 }

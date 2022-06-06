@@ -19,11 +19,12 @@
         "format": "prettier --write \"**/*.{ts,tsx,md}\"",
         "sb": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
+        "update-version": "yarn workspaces foreach version -i patch",
         "publish": "yarn workspaces foreach npm publish --tolerate-republish --access=restricted"
     },
     "devDependencies": {
         "@babel/core": "^7.17.5",
-        "@scrambled-data/tsconfig": "^1.0.0",
+        "@scrambled-data/tsconfig": "^1.0.1",
         "@storybook/addon-actions": "^6.4.19",
         "@storybook/addon-essentials": "^6.4.19",
         "@storybook/addon-interactions": "^6.4.19",
