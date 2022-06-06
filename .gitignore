@@ -1,15 +1,11 @@
 .DS_Store
 node_modules
-.turbo
+storybook-static
 *.log
 .next
 dist
-dist-ssr
 *.local
 .env
 .cache
-server/dist
-public/dist
-.turbo
 coverage
 .yarn/cache
