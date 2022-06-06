@@ -8,5 +8,6 @@ dist
 .env
 .cache
 coverage
-.yarn/cache
 yarn.lock
+.yarn/cache
+.yarn/install-state.gz
