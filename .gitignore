@@ -9,3 +9,4 @@ dist
 .cache
 coverage
 .yarn/cache
+yarn.lock
