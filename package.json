@@ -20,7 +20,8 @@
         "sb": "start-storybook -p 6006",
         "build-storybook": "build-storybook",
         "update-version": "yarn workspaces foreach version -i patch",
-        "publish": "yarn workspaces foreach npm publish --tolerate-republish --access=restricted"
+        "publish": "yarn workspaces foreach npm publish --tolerate-republish --access=restricted",
+        "create-component": "node ./charts/.scripts/createComponent.js"
     },
     "devDependencies": {
         "@babel/core": "^7.17.5",
@@ -41,7 +42,8 @@
         "jest": "^27.5.1",
         "prettier": "^2.5.1",
         "ts-jest": "^27.1.3",
-        "ts-node": "^10.5.0"
+        "ts-node": "^10.5.0",
+        "replace-in-file": "^6.3.5"
     },
     "dependencies": {
         "fs-extra": "^10.1.0",

@@ -14,7 +14,7 @@ prompt.get(['component-folder', 'componentName', 'componentDescription', 'storie
     }
 
     // copy base files from .example folder to new component folder
-    fse.copySync('./.example-package', `./${result['component-folder']}`)
+    fse.copySync('./charts/.example-package', `./${result['component-folder']}`)
 
     const files = [
         `${result['component-folder']}/package.json`,
