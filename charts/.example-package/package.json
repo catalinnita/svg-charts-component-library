@@ -2,7 +2,7 @@
     "name": "@scrambled-data/component-folder",
     "displayName": "ComponentName",
     "description": "ComponentDescription",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",
