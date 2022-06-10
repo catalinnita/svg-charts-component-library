@@ -1,8 +1,8 @@
 {
-    "name": "@scrambled-data/grid",
-    "displayName": "Grid",
-    "description": "grid used to mark the values",
-    "version": "1.0.0",
+    "name": "@scrambled-data/vertical-stacked-timeline-bar-chart",
+    "displayName": "VerticalStackedTimelineBarChart",
+    "description": "Used to sum multiple values for same entity",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",

@@ -4,6 +4,7 @@ import { getMin, getMax } from '@scrambled-data/data'
 import { hexToRgb } from '@scrambled-data/colors'
 import { BarChartDataI, ColorTypeT } from './types'
 import { getColors } from './getColors'
+import { useEffect } from 'react'
 
 export type Props = {
     x: number,

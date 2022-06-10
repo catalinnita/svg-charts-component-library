@@ -1,8 +1,8 @@
 {
-    "name": "@scrambled-data/grid",
-    "displayName": "Grid",
-    "description": "grid used to mark the values",
-    "version": "1.0.0",
+    "name": "@scrambled-data/vertical-evolution-bar-chart",
+    "displayName": "VerticalEvolutionBarChart",
+    "description": "Used to show the relative evolution of an entity for two diferent times",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",

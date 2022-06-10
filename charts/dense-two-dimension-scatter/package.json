@@ -1,8 +1,8 @@
 {
-    "name": "@scrambled-data/grid",
-    "displayName": "Grid",
-    "description": "grid used to mark the values",
-    "version": "1.0.0",
+    "name": "@scrambled-data/dense-two-dimension-scatter",
+    "displayName": "DenseTwoDimensionScatter",
+    "description": "Used to show patterns in scattered values",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",

@@ -1,8 +1,8 @@
 {
-    "name": "@scrambled-data/grid",
-    "displayName": "Grid",
-    "description": "grid used to mark the values",
-    "version": "1.0.0",
+    "name": "@scrambled-data/comparison-horizontal-bar-chart",
+    "displayName": "ComparisonHorizontalBarChart",
+    "description": "Used to compare two sets of date with same categories",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",

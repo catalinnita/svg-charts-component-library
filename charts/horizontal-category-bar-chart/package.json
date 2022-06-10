@@ -1,8 +1,8 @@
 {
-    "name": "@scrambled-data/grid",
-    "displayName": "Grid",
-    "description": "grid used to mark the values",
-    "version": "1.0.0",
+    "name": "@scrambled-data/horizontal-category-bar-chart",
+    "displayName": "HorizontalCategoryBarChart",
+    "description": "Show values split by categories oriented horizontally",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",

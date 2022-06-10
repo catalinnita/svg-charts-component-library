@@ -1,0 +1,3 @@
+import { VerticalRelativeStackedTimelineBarChart } from './VerticalRelativeStackedTimelineBarChart'
+
+export default VerticalRelativeStackedTimelineBarChart

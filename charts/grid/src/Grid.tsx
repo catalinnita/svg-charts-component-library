@@ -18,15 +18,12 @@ export function Grid({
     height = 100
 }) {
     const elementsNrX = (height - startX) / stepX + 1
+    // @ts-ignore
     const horizontalLines = [...Array(elementsNrX).keys()].map(x => x * stepX + startX)
 
     const elementsNrY = (width - startY) / stepY + 1
+    // @ts-ignore
     const verticalLines = [...Array(elementsNrY).keys()].map(y => y * stepY + startY)
-
-    console.log({
-        horizontalLines,
-        verticalLines
-    })
 
     return (
         <>

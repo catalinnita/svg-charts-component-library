@@ -1,8 +1,8 @@
 {
-    "name": "@scrambled-data/grid",
-    "displayName": "Grid",
-    "description": "grid used to mark the values",
-    "version": "1.0.0",
+    "name": "@scrambled-data/trendline-approximation-on-scattered-values",
+    "displayName": "TrendlineApproximationOnScatteredValues",
+    "description": "Used to calculate and show a trendline based on values scattered",
+    "version": "1.0.2",
     "main": "dist/index.js",
     "module": "./dist/index.mjs",
     "types": "dist/index.d.ts",
