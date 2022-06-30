@@ -4,6 +4,7 @@ import { getMin, getMax } from '@scrambled-data/data'
 import { hexToRgb } from '@scrambled-data/colors'
 import { BarChartDataI, ColorTypeT } from './types'
 import { getColors } from './getColors'
+import { generateColors } from './generateColors'
 
 export type Props = {
     x: number,
@@ -16,6 +17,8 @@ export type Props = {
     startColor?: string,
     endColor?: string,
     colorType?: ColorTypeT,
+    r?: number,
+    colors?: string[]
 }
 
 export function BarsVertical({
@@ -28,38 +31,46 @@ export function BarsVertical({
     data,
     startColor,
     endColor,
-    colorType = 'data',
+    r = 0,
+    colorType,
+    colors
 }: Props) {
+    const { 
+        svg: colorsSvg, 
+        colors: colorsData 
+    } = generateColors(data, colors, colorType)
+
     const hMax = getMax<BarChartDataI>(data)
     const hMin = getMin<BarChartDataI>(data)
     const dataHeight = hMin < 0 ? hMax - hMin : hMax
     const hRatio = height / dataHeight
-    const zeroPoint = Math.round(hMax * hRatio)
+    const zeroPoint = y + Math.round(hMax * hRatio)
     const elements = data.length
     
     // for fixed width
-    const gapValue = Math.round(gap * ((elements - 1) / elements))
-    const barThickness = width ? Math.round(width / elements - gapValue) : thickness
+    const gapValue = gap * (elements - 1)
+    const barThickness = width ? (width-gapValue) / elements : thickness
 
     // for fixed thickeness
-    const svgWidth = width || barThickness * elements+ gap * ( elements - 1 )
+    // const svgWidth = width || barThickness * elements+ gap * ( elements - 1 )
 
     const propsData = data.map(({value, color}, index) => {
-        const x =  index * barThickness + index * gap
-        const y = value > 0 ? Math.round(zeroPoint - value * hRatio) : zeroPoint
-        const size = value > 0 ? Math.round(height - y + hMin * hRatio) : Math.round((0 - value) * hRatio)
+        const valNumber = parseFloat(value.toString())
+        const propsX = x + index * barThickness + index * gap
+        const propsY = y + valNumber > 0 ? Math.round(zeroPoint - (valNumber * hRatio)) : zeroPoint
+        const size = valNumber > 0 ? Math.round(y + height - propsY + hMin * hRatio) : Math.round((0 - valNumber) * hRatio)
 
         return {
             ...data[index],
-            color: getColors(colorType,  value, hMin, hMax, color, startColor, endColor),
-            x,
-            y,
-            size,
+            color: colorsData[index],
+            x: propsX,
+            y: propsY,
+            size: size,
         }
     })
 
     return (
-        <svg height={height} width={svgWidth}>
+        <>
             {colorType === 'heat-gradient' && <defs>
                 <GradientVertical
                     id="gradient"
@@ -69,13 +80,16 @@ export function BarsVertical({
                 />
             </defs>}
 
+            { colorsSvg }
+
             { propsData.map(barProps => {
                 return <BarVertical 
+                    r={r}
                     key={barProps.displayValue} 
                     thickness={barThickness} 
                     {...barProps} 
                 /> 
             })}
-        </svg>
+       </>
     )
 }

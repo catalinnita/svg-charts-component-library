@@ -5,4 +5,16 @@ export interface BarChartDataI {
     label: string,
 }
 
-export type ColorTypeT = 'data' | 'transparent-gradient' | 'reverse-transparent-gradient' | 'uni' | 'gradient' | 'heat-gradient'
+export type ColorTypeT = 
+    'data' | 
+    'provided' |
+    'uni' | 
+    'gradient' | 
+    'heat-gradient' | 
+    'transparent-gradient' | 
+    'reverse-transparent-gradient'
+
+export type CommonDataT = {
+    value: number,
+    color: string,
+}[]

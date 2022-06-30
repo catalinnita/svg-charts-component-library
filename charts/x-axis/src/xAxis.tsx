@@ -12,46 +12,22 @@ export function XAxis({
     showMiddleThicks = false,
     showAxis = true,
     showLabels = true,
-    size = 0, 
+    width = 0, 
+    data = [],
+    gap = 0,
 }) {
-    const thicks = [
-        {
-            pos: 0,
-            displayValue: ''
-        },
-        {
-            pos: 20,
-            displayValue: '$10'
-        },
-        {
-            pos: 40,
-            displayValue: '$20'
-        },
-        {
-            pos: 60,
-            displayValue: '$30'
-        },
-        {
-            pos: 80,
-            displayValue: '$40'
-        },
-        {
-            pos: 100,
-            displayValue: '$50'
-        },
-        {
-            pos: 120,
-            displayValue: '$60'
-        },
-        {
-            pos: 140,
-            displayValue: '$70'
-        },
-        {
-            pos: 160,
-            displayValue: '$80'
-        },
-    ]
+    const elements = data.length
+    const gapValue = gap * (elements - 1)
+    const barThickness = width ? (width-gapValue) / elements : 0
+
+    const thicks = data.map((el, index) => {
+        const pos = (x + index * barThickness + index * gap + barThickness/2)
+        return {
+            pos,
+            displayValue: el.label
+        }
+    })
+    console.log(thicks)
 
     const style = (pos: number) => 
         orientation === 'vertical' ? {
@@ -73,7 +49,7 @@ export function XAxis({
             {showAxis && <LineHorizontal 
                 x={x}
                 y={y}
-                size={size}
+                size={width}
             />}
             {thicks.map(({pos, displayValue}, index) => 
                 <>
@@ -90,7 +66,6 @@ export function XAxis({
                         y={y-middleThickSize/2}
                         size={middleThickSize}
                     />}
-
                     {showLabels && <text
                         style={{
                             fontSize: '10px',

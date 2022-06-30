@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+</head>
+<body>
+  <div id="width"></div>
+  <div id="height"></div>
+  <div id="calls"></div>
+
+  <script>
+    var w = document.querySelector("#width"),
+        h = document.querySelector("#height"),
+        c = document.querySelector("#calls"),
+        timeout = false, // holder for timeout id
+        delay = 250, // delay after event is "complete" to run callback
+        calls = 0;
+    
+        // window.resize callback function
+        function getDimensions() {
+          w.innerHTML = window.innerWidth;
+          h.innerHTML = window.innerHeight;
+          calls += 1;
+          c.innerHTML = calls;
+        }
+        
+        // window.resize event listener
+        window.addEventListener('resize', function() {
+          // clear the timeout
+          clearTimeout(timeout);
+          // start timing for event "completion"
+          timeout = setTimeout(getDimensions, delay);
+        });
+        
+        getDimensions();
+      </script>
+</body>
+</html>

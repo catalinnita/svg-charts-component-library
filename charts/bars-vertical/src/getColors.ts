@@ -38,7 +38,6 @@ export const getColors: GetColorsI<ColorTypeT> = (
 
     if (colorType === 'reverse-transparent-gradient' && startColor) {
         const transparency = max - (max-min) * (value - hMin)/(hMax-hMin)
-        //ddddd
         const rgb = hexToRgb(`${startColor}`)
         return `rgba(${rgb?.r}, ${rgb?.g}, ${rgb?.b}, ${transparency})`
     }

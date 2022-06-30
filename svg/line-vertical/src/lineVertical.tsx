@@ -21,7 +21,7 @@ export function LineVertical({
             stroke={color}
             strokeWidth={thickness}
             strokeDasharray={pattern}
-            points={`${x},${y} ${x},${y + size}`}>
+            points={`${x.toFixed(1).replace('.0', '')},${y.toFixed(1).replace('.0', '')} ${x.toFixed(1).replace('.0', '')},${(y + size).toFixed(1).replace('.0', '')}`}>
         </polyline>
     )
 }
