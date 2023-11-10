@@ -35,20 +35,20 @@ export function BarsHorizontal({
     const wMin = getMin<BarChartDataI>(data)
     const dataWidth = wMin < 0 ? wMax - wMin : wMax
     const wRatio = width / dataWidth
-    const zeroPoint = Math.round((0 - wMin) * wRatio)
+    const zeroPoint = (0 - wMin) * wRatio
     const elements = data.length
     
     // for fixed width
-    const gapValue = Math.round(gap * ((elements - 1) / elements))
-    const barThickness = height ? Math.round(height / elements - gapValue) : thickness
+    const gapValue = gap * ((elements - 1) / elements)
+    const barThickness = height ? height / elements - gapValue : thickness
 
     // for fixed thickeness
     const svgHeight = height || barThickness * elements + gap * ( elements - 1 )
 
     const propsData = data.map(({value, color}, index) => {
-        const x = value < 0 ? Math.round(zeroPoint + value * wRatio) : zeroPoint
+        const x = value < 0 ? zeroPoint + value * wRatio : zeroPoint
         const y =  index * barThickness + index * gap
-        const size = value < 0 ? Math.round((0 - value) * wRatio) : Math.round(value * wRatio)
+        const size = value < 0 ? (0 - value) * wRatio : value * wRatio
 
         return {
             ...data[index],

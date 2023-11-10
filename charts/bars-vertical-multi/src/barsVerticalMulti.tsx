@@ -36,13 +36,13 @@ export function BarsVerticalMulti({
     const hMin = getMin(data.map(el => el.values).flat())
     const dataHeight = hMin < 0 ? hMax - hMin : hMax
     const hRatio = height / dataHeight
-    const zeroPoint = Math.round(hMax * hRatio)
+    const zeroPoint = hMax * hRatio
     const groups = data.length
     const elements = data.map(el => el.values).flat().length
     const gGap = groupGap - gap > 0 ? groupGap - gap : 0
     
     // for fixed width
-    const gapWidth = Math.round(gap * (elements - 1) + gGap * (groups - 1))
+    const gapWidth = gap * (elements - 1) + gGap * (groups - 1)
     const barThickness = width ? (width - gapWidth) / elements  : thickness
     // for fixed thickeness
     const svgWidth = width || barThickness * elements + gGap * ( groups - 1 ) + gap * ( elements - 1 )
@@ -51,8 +51,8 @@ export function BarsVerticalMulti({
     const propsData = data.map(({values}, index) => {
         return values.map(({value, color, displayValue}, i) => {
             const x =  it * barThickness + it * gap + index * gGap
-            const y = value > 0 ? Math.round(zeroPoint - value * hRatio) : zeroPoint
-            const size = value > 0 ? Math.round(height - y + hMin * hRatio) : Math.round((0 - value) * hRatio)
+            const y = value > 0 ? zeroPoint - value * hRatio : zeroPoint
+            const size = value > 0 ? height - y + hMin * hRatio : (0 - value) * hRatio
             it += 1
             return {
                 displayValue,

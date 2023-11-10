@@ -1,4 +1,5 @@
 import { hexToRgb, interpolateColor } from "@scrambled-data/colors"
+import GradientVertical from '@scrambled-data/gradient-vertical'
 import { getMax, getMin } from "@scrambled-data/data"
 import { ColorTypeT, CommonDataT } from "./types"
 
@@ -17,9 +18,7 @@ export const generateColors: GenerateColorsI<ColorTypeT, CommonDataT> = (
     data, 
     colors = ['#8f55e5', '#81fd02'], 
     type = 'uni'
-) => {
-    console.log({colors, type})
-    
+) => {    
     if (type === 'data') {
         return {
             colors: data.map(({ color }) => color),
@@ -47,9 +46,18 @@ export const generateColors: GenerateColorsI<ColorTypeT, CommonDataT> = (
     }
 
     if (type === 'heat-gradient') {
+        const GradientSvg = <defs>
+            <GradientVertical
+                id="gradient"
+                size="100%"
+                startColor={`rgb(${Object.values(hexToRgb(colors[1])).join(',')})`}
+                endColor={`rgb(${Object.values(hexToRgb(colors[2])).join(',')})`}
+            />
+        </defs>
+
         return {
             colors: data.map(() => `url(#gradient)`),
-            svg: null
+            svg: GradientSvg
         }
     }
 

@@ -17,11 +17,10 @@ export function LineVertical({
 }: Props) {
     return (
         <polyline 
-            fill="none"
             stroke={color}
             strokeWidth={thickness}
             strokeDasharray={pattern}
-            points={`${x.toFixed(1).replace('.0', '')},${y.toFixed(1).replace('.0', '')} ${x.toFixed(1).replace('.0', '')},${(y + size).toFixed(1).replace('.0', '')}`}>
+            points={`${x},${y} ${x},${(y + size)}`}>
         </polyline>
     )
 }

@@ -39,7 +39,7 @@ export function BarsVerticalStacked({
 
     const dataHeight = hMin < 0 ? hMax - hMin : hMax
     const hRatio = height / dataHeight
-    const zeroPoint = Math.ceil(hMax * hRatio)
+    const zeroPoint = hMax * hRatio
     const elements = data.length
 
     console.log({
@@ -54,8 +54,8 @@ export function BarsVerticalStacked({
 
     
     // for fixed width
-    const gapValue = Math.ceil(gap * ((elements - 1) / elements))
-    const barThickness = width ? Math.ceil(width / elements - gapValue) : thickness
+    const gapValue = gap * ((elements - 1) / elements)
+    const barThickness = width ? width / elements - gapValue : thickness
 
     // for fixed thickeness
     const svgWidth = width || barThickness * elements + gap * ( elements - 1 )
@@ -80,13 +80,13 @@ export function BarsVerticalStacked({
                 return acc
             }, 0)
             
-            const yRevPos = Math.ceil(ySumPos * hRatio)
-            const yRevNeg = Math.ceil(ySumNeg * hRatio)
-            const yabs = Math.ceil(value * hRatio)
+            const yRevPos = ySumPos * hRatio
+            const yRevNeg = ySumNeg * hRatio
+            const yabs = value * hRatio
             
             const y = value > 0 ? zeroPoint - yRevPos - yabs : zeroPoint + yRevNeg
             
-            const size = value > 0 ? yabs : Math.ceil((0 - value) * hRatio)
+            const size = value > 0 ? yabs : (0 - value) * hRatio
             const modifiedColor =  getColors(colorType,  value, hMin, hMax, color, startColor, endColor)
             return {
                 displayValue,
@@ -98,7 +98,6 @@ export function BarsVerticalStacked({
         })
         
     }).flat()
-    console.log(propsData)
 
     return (
         <svg height={height} width={svgWidth}>

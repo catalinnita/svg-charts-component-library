@@ -39,12 +39,12 @@ export function BarsHorizontalStacked({
 
     const dataWidth = wMin < 0 ? wMax - wMin : wMax
     const wRatio = width / dataWidth
-    const zeroPoint = Math.ceil((0 - wMin) * wRatio)
+    const zeroPoint = (0 - wMin) * wRatio
     const elements = data.length
     
     // for fixed width
-    const gapValue = Math.ceil(gap * ((elements - 1) / elements))
-    const barThickness = height ? Math.ceil(height / elements - gapValue) : thickness
+    const gapValue = gap * ((elements - 1) / elements)
+    const barThickness = height ? height / elements - gapValue : thickness
 
     // for fixed thickeness
     const svgHeight = height || barThickness * elements + gap * ( elements - 1 )
@@ -69,13 +69,13 @@ export function BarsHorizontalStacked({
                 return acc
             }, 0)
             
-            const xRevPos = Math.ceil(xSumPos * wRatio)
-            const xRevNeg = Math.ceil(xSumNeg * wRatio)
-            const xabs = Math.ceil(value * wRatio)
+            const xRevPos = xSumPos * wRatio
+            const xRevNeg = xSumNeg * wRatio
+            const xabs = value * wRatio
             
             const x = value < 0 ? zeroPoint - xRevNeg + xabs : zeroPoint + xRevPos
             
-            const size = value < 0 ? Math.ceil((0 - value) * wRatio) :  Math.ceil(value * wRatio)
+            const size = value < 0 ? (0 - value) * wRatio :  value * wRatio
             const modifiedColor =  getColors(colorType,  value, wMin, wMax, color, startColor, endColor)
             return {
                 displayValue,

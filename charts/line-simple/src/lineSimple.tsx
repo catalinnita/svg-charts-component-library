@@ -38,7 +38,7 @@ export function LineSimple({
     const hMin = getMin<any>(data)
     const dataHeight = hMin < 0 ? hMax - hMin : hMax
     const hRatio = height / dataHeight
-    const zeroPoint = Math.round(hMax * hRatio)
+    const zeroPoint = hMax * hRatio
 
     const years = data.reduce((acc: any[], curr) => {
         if (acc.includes(curr.Year)) {
@@ -50,15 +50,6 @@ export function LineSimple({
         ]
     }, []).sort()
     
-    console.log({years})
-
-    // // for fixed width
-    // const gapValue = Math.round(gap * ((elements - 1) / elements))
-    // const barThickness = width ? Math.round(width / elements - gapValue) : thickness
-
-    // // for fixed thickeness
-    // const svgWidth = width || barThickness * elements+ gap * ( elements - 1 )
-
     const grouppedData = data.reduce((acc: Record<any, any>, curr) => {
         acc[curr.Entity] = acc[curr.Entity] || []
         acc[curr.Entity].push(curr)

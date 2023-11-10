@@ -6,6 +6,8 @@ export type Props = {
     color?: string,
     pattern?: string,
     r?: number
+    className?: string
+    displayValue?: string
 }
 
 export function BarVertical({
@@ -16,15 +18,19 @@ export function BarVertical({
     color = 'black',
     pattern = '',
     r = 0,
+    className,
+    displayValue
 }: Props) {
     return (
         <rect 
+            data-value={displayValue}
+            className={className}
             rx={r}
             ry={r}
-            x={x.toFixed(1).replace('.0', '')} 
-            y={y.toFixed(1).replace('.0', '')} 
-            width={thickness.toFixed(1).replace('.0', '')}
-            height={size.toFixed(1).replace('.0', '')} 
+            x={x} 
+            y={y} 
+            width={thickness}
+            height={size} 
             fill={color} 
         />
     )

@@ -38,13 +38,13 @@ export function ScatterPlot({
     const hMin = getMin<any>(data.map(el => ({ value: el.Sale_price })))
     const dataHeight = hMin < 0 ? hMax - hMin : hMax
     const hRatio = (height - offset * 2) / dataHeight
-    const hZeroPoint = offset + Math.round(hMax * hRatio)
+    const hZeroPoint = offset + hMax * hRatio
 
     const wMax = getMax<any>(data.map(el => ({ value: el.FinishedSqft })))
     const wMin = getMin<any>(data.map(el => ({ value: el.FinishedSqft })))
     const dataWidth = wMin < 0 ? wMax - wMin : wMax
     const wRatio = (width - offset * 2) / dataWidth
-    const wZeroPoint = offset + Math.round(wMax * wRatio)
+    const wZeroPoint = offset + wMax * wRatio
 
     const rMax = getMax<any>(data.map(el => ({ value: el.Rooms })))
     const rRatio = maxRadius ? maxRadius / rMax : 0

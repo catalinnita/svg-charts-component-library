@@ -1,6 +1,6 @@
 export type Props = {
     id: string,
-    size: number,
+    size: number | string,
     startColor: string,
     endColor: string,
 }

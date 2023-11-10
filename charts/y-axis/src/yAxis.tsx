@@ -3,6 +3,23 @@ import LineHorizontal from '@scrambled-data/line-horizontal'
 import LineVertical from '@scrambled-data/line-vertical'
 import { BarChartDataI } from '../../bars-vertical/dist/types';
 
+export type YAxisI = {
+    x?: number
+    y?: number
+    thickSize?: number
+    middleThickSize?: number
+    orientation?: 'horizontal' | 'vertical'
+    offset?: number
+    showThicks?: boolean
+    showMiddleThicks?: boolean
+    showAxis?: boolean
+    showLabels?: boolean
+    height?: number
+    data: any[]
+    gap?: number,
+}
+
+
 export function YAxis({
     x = 40,
     y = 0,
@@ -16,14 +33,14 @@ export function YAxis({
     showAxis = true,
     showLabels = true,
     data = [],
-}) {
+}: YAxisI) {
     const hMax = getMax<BarChartDataI>(data)
     const hRatio = height / hMax
     const values = Array.from({length: 10 + 1}, (v: number, i: number) => i*(hMax/10 + 1))
 
     const thicks = values.map((el) => ({
         pos: (y + height - el * hRatio),
-        displayValue: Math.floor(el),
+        displayValue: el,
     }));
 
     const style = (pos: number) => 

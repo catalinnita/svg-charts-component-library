@@ -1,0 +1,23 @@
+{
+    "name": "@scrambled-data/legend",
+    "displayName": "Legend",
+    "description": "title, description series",
+    "version": "1.0.2",
+    "main": "dist/index.js",
+    "module": "./dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "utl": "https://github.com/catalinnita/svg-charts-component-library"
+    },
+    "scripts": {
+        "build": "tsc src/index.tsx --declaration --jsx react-jsx --outDir ./dist",
+        "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
+        "lint": "TIMING=1 eslint src --fix",
+        "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+    },
+    "dependencies": {
+        "react": "^18.1.0"
+    }
+}
